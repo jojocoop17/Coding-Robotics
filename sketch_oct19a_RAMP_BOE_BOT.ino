@@ -13,7 +13,7 @@ Servo servoLeft;                             // Declare left and right servos
 void setup()                                 // Built-in initialization block
 {
      Servo servoRight;
-Servo servoLeft;                           // Delay to finish tone
+Servo servoLeft;                           
 
   servoLeft.attach(13);                      // Attach left signal to pin 13
   servoRight.attach(12);                     // Attach right signal to pin 12
@@ -25,16 +25,17 @@ Servo servoLeft;                           // Delay to finish tone
 // Turn right in place
   servoLeft.writeMicroseconds(1700);         // Left wheel counterclockwise
   servoRight.writeMicroseconds(1450);        // Right wheel counterclockwise
-  delay(1500);                                // ...for 0.6 seconds
+  delay(1500);                                // ...for 1.5 seconds
 
   // Turn left in place
   servoLeft.writeMicroseconds(1550);         // Left wheel clockwise
   servoRight.writeMicroseconds(1300);        // Right wheel clockwise
-  delay(3000);                                // ...for 0.6 seconds
+  delay(3000);                                // ...for 3 seconds
 
   servoLeft.writeMicroseconds(1700);         // Left wheel counterclockwise
-  servoRight.writeMicroseconds(1450);        // Right wheel counterclockwise
-  delay(1400);    
+  servoRight.writeMicroseconds(1450);        // Right wheel slow clockwise
+ 
+  delay(1400);                               //delay 1.4 seconds
  
   // Full speed forward
   servoLeft.writeMicroseconds(1700);         // Left wheel clockwise
